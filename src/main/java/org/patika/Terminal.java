@@ -7,14 +7,6 @@ public class Terminal {
     public static final String HIGHLIGHT = "\u001B[107m";
     public static final String BOLD = "\u001B[1m";
 
-    // Clear terminal method.
-    public static void clear() {
-        try { // Check if the OS is Windows and run the appropriate shell command.
-            if (System.getProperty("os.name").contains("Windows")) Runtime.getRuntime().exec("cls");
-            else Runtime.getRuntime().exec("clear");
-        } catch (final Exception e) {System.err.println("Unable to clear the terminal screen: " + e);}
-    }
-
     // Get the string for each cell and if it contains S or O, highlight it.
     public static String getCellString(char c){
         if (c == 'S' || c == 'O') return String.format("|%s%s %s %s", HIGHLIGHT, COLOR_GREEN, c, COLOR_DEFAULT);

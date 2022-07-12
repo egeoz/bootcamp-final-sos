@@ -83,7 +83,6 @@ public class Board {
     // Draws the board on the terminal.
     public void drawBoard(){
         System.out.printf("%n%n%s%s%s%s%n%n",Terminal.BOLD, Terminal.COLOR_GREEN, Terminal.getSeparator(size * 2), Terminal.COLOR_DEFAULT);
-        Terminal.clear();
         StringBuilder output = new StringBuilder(" ");
         // Add column numbers to the output.
         for (int x = 0; x < size; x++){
